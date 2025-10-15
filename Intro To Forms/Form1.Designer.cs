@@ -33,13 +33,14 @@
             this.lblInstruction = new System.Windows.Forms.Label();
             this.imgThwomp = new System.Windows.Forms.PictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgThwomp)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(383, 82);
+            this.btnSubmit.Location = new System.Drawing.Point(401, 194);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(83, 32);
             this.btnSubmit.TabIndex = 0;
@@ -50,7 +51,7 @@
             // lblInstruction
             // 
             this.lblInstruction.AutoSize = true;
-            this.lblInstruction.Location = new System.Drawing.Point(333, 66);
+            this.lblInstruction.Location = new System.Drawing.Point(346, 47);
             this.lblInstruction.Name = "lblInstruction";
             this.lblInstruction.Size = new System.Drawing.Size(182, 13);
             this.lblInstruction.TabIndex = 1;
@@ -59,27 +60,41 @@
             // imgThwomp
             // 
             this.imgThwomp.Image = ((System.Drawing.Image)(resources.GetObject("imgThwomp.Image")));
-            this.imgThwomp.Location = new System.Drawing.Point(366, 120);
+            this.imgThwomp.Location = new System.Drawing.Point(231, 141);
             this.imgThwomp.Name = "imgThwomp";
-            this.imgThwomp.Size = new System.Drawing.Size(100, 115);
+            this.imgThwomp.Size = new System.Drawing.Size(100, 111);
             this.imgThwomp.TabIndex = 2;
             this.imgThwomp.TabStop = false;
+            this.imgThwomp.Visible = false;
+            this.imgThwomp.Click += new System.EventHandler(this.imgThwomp_Click);
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(400, 299);
+            this.lblStatus.Location = new System.Drawing.Point(398, 178);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(37, 13);
+            this.lblStatus.Size = new System.Drawing.Size(98, 13);
             this.lblStatus.TabIndex = 3;
-            this.lblStatus.Text = "Status";
+            this.lblStatus.Text = "Status: Not Clicked";
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Enabled = false;
+            this.btnQuit.Location = new System.Drawing.Point(409, 321);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit.TabIndex = 4;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.imgThwomp);
             this.Controls.Add(this.lblInstruction);
@@ -98,6 +113,7 @@
         private System.Windows.Forms.Label lblInstruction;
         private System.Windows.Forms.PictureBox imgThwomp;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnQuit;
     }
 }
 
